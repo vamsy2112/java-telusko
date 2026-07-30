@@ -31,5 +31,10 @@ public class ArrayOfObjects {
         for (int i = 0; i < students.length; i++) {
             System.out.println(students[i].name + " " + ":" + " " + students[i].marks);
         }
+
+        // with enhanced for loop
+        for (Student n : students) {
+            System.out.println(n.name + " " + ":" + " " + n.marks);
+        }
     }
 }
