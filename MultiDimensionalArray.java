@@ -9,5 +9,13 @@ public class MultiDimensionalArray {
             }
             System.out.println(" ");
         }
+
+        // Enhanced for loop
+        for (int n[] : arr) {
+            for (int m : n) {
+                System.out.print(m + " ");
+            }
+            System.out.println(" ");
+        }
     }
 }
