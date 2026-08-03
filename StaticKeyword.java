@@ -3,6 +3,10 @@ class Mobile {
     String brand;
     int price;
     static String name;
+
+    public void show() {
+        System.out.println(brand + " : " + price + " : " + name);
+    }
 }
 
 public class StaticKeyword {
@@ -25,7 +29,10 @@ public class StaticKeyword {
         obj1.price = 1700;
         Mobile.name = "smartphone";
 
-        System.out.println(obj.brand + " : " + obj.price + " : " + Mobile.name);
+        // System.out.println(obj.brand + " : " + obj.price + " : " + Mobile.name);
+
+        obj.show();
+        obj1.show();
 
     }
 }
