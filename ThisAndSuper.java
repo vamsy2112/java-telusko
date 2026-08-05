@@ -20,7 +20,13 @@ class B extends A {
     // 2. now lets create a parameterised constructor
     public B(int n) {
         // super();
-        super(n);
+        // super(n); // 5. now if you uncomment this line then it will call
+        // parameterised constructor of A class.
+
+        this(); // 6. now if you uncomment this line then it will call main constructor of B
+                // class. so this() method calls the constructor of same class. so when this()
+                // method encounters super() in main constructor of B, it calls main constructor
+                // of A. Hence the output is in A, In b, In B int.
         System.out.println("in B int");
     }
 }
