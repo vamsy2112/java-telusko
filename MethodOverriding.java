@@ -19,7 +19,8 @@ class B extends A {
 
     public void show() {
         System.out.println("in B show"); // you see the method with same name in a class following inheritance is
-                                         // possible and this is called method overriding.
+                                         // possible and this is called method overriding. It has same name, same params
+                                         // but different return behaviour
     }
 }
 
