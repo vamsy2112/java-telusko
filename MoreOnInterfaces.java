@@ -26,7 +26,7 @@ interface X extends B { // as simple as class gets extended from parent class.
 // Most important thing is to create a concrete class and implement all the
 // methods from interfaces.
 
-class C implements X, A { // concrete class
+class C implements X, A { // concrete class; Interfaces support mulltiple interfaces
     public void show() {
         System.out.println("in show");
     }
