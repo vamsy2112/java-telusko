@@ -13,6 +13,10 @@ interface A {
     void config();
 }
 
+interface B {
+    void walk();
+}
+
 interface X extends A { // as imple as class gets extended from parent class.
     void run();
 
@@ -22,7 +26,7 @@ interface X extends A { // as imple as class gets extended from parent class.
 // Most important thing is to create a concrete class and implement all the
 // methods from interfaces.
 
-class B implements X { // concrete class
+class C implements X { // concrete class
     public void show() {
         System.out.println("in show");
     }
@@ -41,7 +45,7 @@ public class MoreOnInterfaces {
     public static void main(String[] args) {
         // remember, we can create an object of a concrete class only
 
-        B obj = new B();
+        C obj = new C();
         obj.config();
         System.out.println(X.age);
     }
