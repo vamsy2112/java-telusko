@@ -17,7 +17,7 @@ interface B {
     void walk();
 }
 
-interface X extends A { // as imple as class gets extended from parent class.
+interface X extends B { // as simple as class gets extended from parent class.
     void run();
 
     int age = 29;
@@ -26,7 +26,7 @@ interface X extends A { // as imple as class gets extended from parent class.
 // Most important thing is to create a concrete class and implement all the
 // methods from interfaces.
 
-class C implements X { // concrete class
+class C implements X, A { // concrete class
     public void show() {
         System.out.println("in show");
     }
@@ -39,14 +39,32 @@ class C implements X { // concrete class
         System.out.println("in run");
     }
 
+    public void walk() {
+        System.out.println("in walk");
+    }
+
 }
 
 public class MoreOnInterfaces {
     public static void main(String[] args) {
         // remember, we can create an object of a concrete class only
 
-        C obj = new C();
+        A obj = new C();
+
+        // we can now call the methods which are in A and not others
         obj.config();
+
+        // obj.walk(); // uncomment this line of code and you'll see that you cannot
+        // call walk() here since reference variable obj of
+        // interface type A
+        // doesnt know about object of C which is a class.
+
+        // in order to call this, we must create a reference of interface B with object
+        // of class C.
+
+        B obj1 = new C();
+        obj1.walk();
+
         System.out.println(X.age);
     }
 }
