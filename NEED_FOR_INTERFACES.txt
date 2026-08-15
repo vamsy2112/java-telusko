@@ -14,7 +14,7 @@ A Bird can fly. A Airplane can fly. A Superhero can fly.
 Bird, Airplane, Superhero are NOT related to each other at all (not the same family)
 But they all made a "promise" — "I know how to fly"
 That's the core difference:
-Abstract Class	Interface
+                   Abstract Class	   Interface
 Relationship	"IS-A" same family	"CAN-DO" a capability
 Code sharing	Can share actual working code	(mostly) Just promises, no code
 How many?	A class can extend only 1 abstract class	A class can implement many interfaces
@@ -108,7 +108,7 @@ public class Main {
 
 
 Key line to notice: class Duck implements CanFly, CanSwim — a class can implement as many interfaces as you want, comma-separated. But it can extends only one class (abstract or not). This is the biggest practical reason interfaces exist — Java doesn't allow "multiple inheritance" of classes (too confusing/dangerous), but multiple interfaces are totally fine because they're just promises, not shared code.
-Real-world example: Why this actually matters in your React/Node work
+Real-world example: Why this actually matters?
 Think of it like this — in your payment gateway work:
 java
 
