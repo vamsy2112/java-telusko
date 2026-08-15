@@ -35,6 +35,8 @@ class Circle {
 public class Exercise3 {
     public static void main(String[] args) {
         Circle obj = new Circle();
+        // radius = 10; // we cannot re assign the radius variable since it is a final
+        // variable.
         System.out.println("Circle with radius " + obj.getRadius() + " has area: " + obj.calculateAread());
     }
 }
