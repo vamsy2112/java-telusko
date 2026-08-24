@@ -6,6 +6,8 @@
 //3. If you want to pass your own message, then pass it to a parameter. see line number 31.
 // 4. call this via a constructor of namedException class and a super method inside the constructor
 
+// adding a new comment
+
 class VamsyException extends Exception {
     public VamsyException(String str) {
         super(str);
