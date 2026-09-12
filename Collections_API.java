@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -92,5 +94,25 @@ public class Collections_API {
             System.out.println(values.next());
         }
 
+        System.out.println("******************* Map *******************");
+
+        Map<String, Integer> obj3 = new HashMap<>();
+
+        obj3.put("Vamsy", 10);
+        obj3.put("Sailu", 91);
+        obj3.put("Murty", 93);
+        obj3.put("Yamini", 97);
+
+        System.out.println(obj3.get("Murty"));
+        System.out.println(obj3.keySet());
+
+        for (String key : obj3.keySet()) {
+            System.out.println(key + " : " + obj3.get(key));
+        }
+
+        System.out.println();
+
+        // HashMap and Hashtable are same except the fact that Hashtable works
+        // synchronized(if there are multiple threads working concurrently).
     }
 }
