@@ -3,6 +3,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Collections_API {
     public static void main(String[] args) {
@@ -18,10 +19,15 @@ public class Collections_API {
         // developers to create their own custom collection classes that can be used
         // with the standard collection classes.
 
+        // 5. collections API is a concept
+        // 6. Collection is an interface
+        // 7. Collections is a class
+
         System.out.println("******** ArrayList **********");
         Collection<Integer> obj = new ArrayList<Integer>();
         // obj.add(obj) By default it will add an object. and hence we need to provide
         // <Integer> to add an integer.
+        // this is better if you just want to print values
 
         obj.add(1);
         obj.add(2);
@@ -33,6 +39,8 @@ public class Collections_API {
 
         System.out.println("*********** List **********");
         List<Integer> nums = new ArrayList<Integer>();
+        // This is better if you want to fetch values as it provides get() and indexOf()
+        // methods.
         nums.add(1);
         nums.add(2);
         nums.add(3);
@@ -41,8 +49,13 @@ public class Collections_API {
             System.out.println(i * 2);
         }
 
+        nums.get(2);
+        nums.indexOf(3);
+
         System.out.println("************ Set and HashSet *****************");
         Set<Integer> obj1 = new HashSet<Integer>();
+
+        // Removes duplicates from an array.
         obj1.add(1);
         obj1.add(2);
         obj1.add(3);
@@ -56,6 +69,19 @@ public class Collections_API {
 
         for (int i : obj1) {
             System.out.println(i); // prints unique elements
+        }
+
+        System.out.println("************* Set and Treeset ******************");
+        Set<Integer> obj2 = new TreeSet<Integer>();
+        // you can use this if you want all sorted elements from an array.
+
+        obj2.add(10);
+        obj2.add(1);
+        obj2.add(88);
+        obj2.add(41);
+
+        for (int i : obj2) {
+            System.out.println(i);
         }
 
     }
