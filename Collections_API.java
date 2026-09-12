@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -82,6 +83,13 @@ public class Collections_API {
 
         for (int i : obj2) {
             System.out.println(i);
+        }
+
+        System.out.println("************** Iterator is parent to Collection interface ***************");
+        Iterator<Integer> values = nums.iterator();
+
+        while (values.hasNext()) {
+            System.out.println(values.next());
         }
 
     }
