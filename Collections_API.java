@@ -188,11 +188,14 @@ public class Collections_API {
             }
 
             public int compareTo(Student s) {
-                return this.marks - s.marks;
+                if (this.marks > s.marks) {
+                    return 1;
+                } else
+                    return -1;
             }
 
             public String toString() {
-                return "Student(marks=" + marks + ", age=" + age + ")";
+                return "Student [marks=" + marks + ", age=" + age + "]";
             }
 
         }
