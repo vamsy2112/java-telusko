@@ -175,5 +175,36 @@ public class Collections_API {
 
         Collections.sort(str, com1);
         System.out.println(str);
+
+        System.out.println("******************* Comparable *************************");
+
+        class Student implements Comparable<Student> {
+            int marks;
+            int age;
+
+            Student(int marks, int age) {
+                this.age = age;
+                this.marks = marks;
+            }
+
+            public int compareTo(Student s) {
+                return this.marks - s.marks;
+            }
+
+            public String toString() {
+                return "Student(marks=" + marks + ", age=" + age + ")";
+            }
+
+        }
+        List<Student> studs = new ArrayList<Student>();
+
+        studs.add(new Student(18, 18));
+        studs.add(new Student(19, 18));
+        studs.add(new Student(1, 18));
+        studs.add(new Student(97, 18));
+        studs.add(new Student(35, 18));
+
+        Collections.sort(studs);
+        System.out.println(studs);
     }
 }
