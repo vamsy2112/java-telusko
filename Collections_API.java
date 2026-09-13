@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -88,6 +90,7 @@ public class Collections_API {
         }
 
         System.out.println("************** Iterator is parent to Collection interface ***************");
+
         Iterator<Integer> values = nums.iterator();
 
         while (values.hasNext()) {
@@ -114,5 +117,63 @@ public class Collections_API {
 
         // HashMap and Hashtable are same except the fact that Hashtable works
         // synchronized(if there are multiple threads working concurrently).
+
+        System.out.println("************ Collections class *************");
+        List<Integer> nums1 = new ArrayList<>();
+
+        nums1.add(13);
+        nums1.add(12);
+        nums1.add(113);
+        nums1.add(47);
+
+        Collections.sort(nums1); // sorts the array in ascending order
+        System.out.println(nums1);
+
+        // If you want to sort with custom logic, lets say, if you want to sort based on
+        // the last digit of each number, then use second parameter for sort method
+        // i.e., comparator obj.
+
+        System.out.println("*********************** Collections class with comparator obj ***************************");
+
+        Comparator<Integer> com = new Comparator<Integer>() {
+
+            public int compare(Integer i, Integer j) {
+                if (i % 10 > j % 10) {
+                    return 1;
+                } else
+                    return -1;
+            }
+        };
+
+        List<Integer> nums2 = new ArrayList<>();
+        nums2.add(13);
+        nums2.add(19);
+        nums2.add(1139);
+        nums2.add(47);
+        nums2.add(41);
+
+        Collections.sort(nums2, com);
+        System.out.println(nums2);
+
+        System.out.println("*********** Collections class with sorting of string based on length ****************");
+
+        Comparator<String> com1 = new Comparator<String>() {
+            public int compare(String s1, String s2) {
+                if (s1.length() > s2.length()) {
+                    return 1;
+                } else
+                    return -1;
+            }
+        };
+
+        List<String> str = new ArrayList<String>();
+
+        str.add("Vamsy");
+        str.add("Sailaja");
+        str.add("Murtyy");
+        str.add("Yaminiii");
+
+        Collections.sort(str, com1);
+        System.out.println(str);
     }
 }
