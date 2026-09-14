@@ -15,4 +15,7 @@ public class Arrays {
         arr1[0] = 10;
         System.out.println(arr1[0]);
     }
+
+    public class asList {
+    }
 }
